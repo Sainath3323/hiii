@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Notes Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Class Notes Upload</h1>
+
+        <!-- Admin Login Section -->
+        <div class="login-section" id="admin-login-section">
+            <h2>Admin Login</h2>
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" placeholder="Enter Admin Username">
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" placeholder="Enter Admin Password">
+            <button id="admin-login">Login as Admin</button>
+        </div>
+
+        <!-- Student Login Section -->
+        <div class="login-section" id="student-login-section">
+            <h2>Student Login</h2>
+            <label for="student-username">Username:</label>
+            <input type="text" id="student-username" placeholder="Enter Student Username">
+            <label for="student-password">Password:</label>
+            <input type="password" id="student-password" placeholder="Enter Student Password">
+            <button id="student-login">Login as Student</button>
+            <button id="student-register-btn">Register as Student</button> <!-- Register Button -->
+        </div>
+
+        <!-- Student Registration Section -->
+        <div class="registration-section" id="student-registration-section" style="display:none;">
+            <h2>Student Registration</h2>
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" placeholder="Enter Student Username">
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" placeholder="Enter Student Password">
+            <button id="register-btn">Register</button>
+            <button id="cancel-register-btn">Cancel</button>
+        </div>
+
+        <!-- Admin Section (Upload and Manage) -->
+        <div class="upload-section" id="upload-section" style="display:none;">
+            <h2>Upload Class Notes</h2>
+            <label for="subject">Select Subject:</label>
+            <select id="subject">
+                <!-- Options will be populated dynamically -->
+            </select>
+
+            <div class="manage-subjects">
+                <h3>Manage Subjects</h3>
+                <input type="text" id="new-subject" placeholder="Enter new subject" />
+                <button id="add-subject">Add Subject</button>
+                <ul id="subject-list"></ul>
+            </div>
+
+            <input type="file" id="file-upload" accept=".pdf, .docx, .pptx, .txt">
+            <button id="upload-btn">Upload Notes</button>
+            <div id="response"></div>
+
+            <button id="admin-logout" style="display:none;">Logout</button>
+        </div>
+
+        <!-- Student Section (View Uploaded Notes) -->
+        <div class="student-section" id="student-section" style="display:none;">
+            <h2>Available Class Notes</h2>
+            <div id="student-subjects"></div>
+            <button id="student-logout">Logout</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
